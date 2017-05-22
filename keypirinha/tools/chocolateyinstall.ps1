@@ -6,8 +6,8 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'keypirinha' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.1/keypirinha-2.15.1-x86-portable.7z' # download url, HTTPS preferred
+$url64      = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.1/keypirinha-2.15.1-x64-portable.7z' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 
@@ -25,9 +25,9 @@ $packageArgs = @{
   # To determine checksums, you can get that from the original site if provided. 
   # You can also use checksum.exe (choco install checksum) and use it 
   # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
+  checksum      = '85f38e8d5e2b95e7cf7b8611a6ad36552acb4280e8bfde7ead958820a54fd71c'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
+  checksum64    = 'd6541044273036c4d5e4eb4c75ac82bc09dab5684b5287750974c01311e0f30b'
   checksumType64= 'sha256' #default is checksumType
 
   #MSI
