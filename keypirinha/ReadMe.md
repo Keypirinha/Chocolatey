@@ -1,4 +1,6 @@
-﻿# Keypirinha
+﻿Chocolatey package to install Keypirinha.
+
+# Keypirinha
 
 A fast keystroke launcher for Windows
 
