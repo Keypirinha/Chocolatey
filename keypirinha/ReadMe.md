@@ -9,3 +9,5 @@ A fast keystroke launcher for Windows
 * [Official Packages repository](https://github.com/Keypirinha/Packages)
 
 Current version: 2.15.1
+
+[Official Repo](https://github.com/Keypirinha/Keypirinha)
