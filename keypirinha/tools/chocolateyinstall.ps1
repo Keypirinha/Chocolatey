@@ -14,7 +14,7 @@ $url64      = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  # fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
@@ -49,7 +49,7 @@ $packageArgs = @{
   #validExitCodes= @(0) #please insert other valid exit codes here
 }
 
-Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
+#Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
 #Install-ChocolateyZipPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-zip-package
 ## If you are making your own internal packages (organizations), you can embed the installer or 
 ## put on internal file share and use the following instead (you'll need to add $file to the above)
@@ -128,7 +128,15 @@ Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-ins
 ##PORTABLE EXAMPLE
 #$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # despite the name "Install-ChocolateyZipPackage" this also works with 7z archives
-#Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
+Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
+if (Get-ProcessorBits 64) {
+  Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
+} else {
+  Install-ChocolateyZipPackage $packageName $url $toolsDir $url
+}
+$portableDir = "$toolsDir/keypirinha/portable"
+Write-Host "Deleting `'$portableDir`'"
+Remove-Item -Recurse -Force $portableDir
 ## END PORTABLE EXAMPLE
 
 ## [DEPRECATING] PORTABLE EXAMPLE
