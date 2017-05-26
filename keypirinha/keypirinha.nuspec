@@ -29,15 +29,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <version>2.15.1</version>
     <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <!--<owners>laurin1</owners>-->
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>keypirinha (Install)</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <title>Keypirinha</title>
+    <authors>Jean-Charles Lefebvre</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <projectUrl>http://keypirinha.com/</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/keypirinha.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
@@ -47,9 +47,39 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>keypirinha admin SPACE_SEPARATED</tags>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
+    <tags>keypirinha freeware admin</tags>
+    <summary>Keypirinha is a fast launcher for keyboard ninjas on Windows.</summary>
+    <description>
+Keypirinha is a fast launcher for keyboard ninjas on Windows.
+
+Features:
+
+Quickly find and launch plethora of items like applications, files, bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...
+Launch a search on any configured website or online dictionary
+Language translations on-the-fly
+Evaluate mathematical expressions
+Base conversion of numbers
+Search your environment variables
+Launch a copied URL directly (http, mailto, skype, ...)
+Split a URL and convert its arguments to JSON
+Switch to a running application by name
+Hash a string (CRC32, MD5, SHA, ...)
+Generate random UUIDs, passwords, bytes sequences
+Naturally associate a keyword to a specific item
+Machine-specific and/or user-specific configuration
+And more, see Shipped Packages
+Properties:
+
+Freeware, no nag screen, no time limit, no ads
+Customizable GUI (colors, fonts, toggling and positioning of elements)
+Lightning fast
+Fairly small memory footprint
+Battery friendly
+File-driven configuration
+Steep but rewarding learning curve
+Written in C++, exposes a Python3 API for its plugins
+You can think of Keypirinha as an alternative to Launchy and a cousin of Alfred.
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
 
