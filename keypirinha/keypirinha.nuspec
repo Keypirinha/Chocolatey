@@ -80,7 +80,22 @@ Steep but rewarding learning curve
 Written in C++, exposes a Python3 API for its plugins
 You can think of Keypirinha as an alternative to Launchy and a cousin of Alfred.
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>
+v2.15.1 - 2017-05-10
+
+Application
+Added the file_explorer setting (issue #62, issue #173)
+All orphan items are filtered-out of the search (only history items were)
+Search algorithm is slightly more accurate
+Fixed: Keypirinha can be launched from a network drive (issue #190)
+Fixed: the satellite icon was positioned nearby the top-left corner of the screen in some cases
+
+Docs
+WebSuggest Package: referenced @bege10‘s config for German suggestions. Thanks! (issue #189)
+Minor corrections in Extending Keypirinha (API)
+Minor corrections in Keyboard Shortcuts
+Minor corrections in the default Keypirinha.ini file ([theme/Default] section)
+    </releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
