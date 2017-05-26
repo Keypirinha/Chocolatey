@@ -128,12 +128,13 @@ $packageArgs = @{
 ##PORTABLE EXAMPLE
 #$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # despite the name "Install-ChocolateyZipPackage" this also works with 7z archives
-Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
+
 if (Get-ProcessorBits 64) {
   Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
 } else {
   Install-ChocolateyZipPackage $packageName $url $toolsDir $url
 }
+
 $portableDir = "$toolsDir/keypirinha/portable"
 Write-Host "Deleting `'$portableDir`'"
 Remove-Item -Recurse -Force $portableDir
