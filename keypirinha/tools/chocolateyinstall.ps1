@@ -31,9 +31,9 @@ if (Get-ProcessorBits 64) {
   Install-ChocolateyZipPackage $packageName $url $toolsDir $url
 }
 
-$portableDir = "$toolsDir/keypirinha/portable"
-Write-Host "Deleting `'$portableDir`'"
-Remove-Item -Recurse -Force $portableDir
-Start-Process "$installDir/keypirinha.exe"
+$portableDir = "$toolsDir\keypirinha\portable"
 
-
+if ( $(Try { Test-Path $portableDir } Catch { $false }) ) {
+  Write-Host "Deleting `'$portableDir`' so that Keypirinha runs in Install Mode"
+  Remove-Item -Recurse -Force $portableDir
+}
