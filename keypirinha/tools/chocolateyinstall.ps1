@@ -1,4 +1,8 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿Write-Host 'Stopping process...'
+Stop-Process -processname keypirinha* -force
+
+$ErrorActionPreference = 'Stop';
+
 $packageName= 'keypirinha'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.1/keypirinha-2.15.1-x86-portable.7z'
