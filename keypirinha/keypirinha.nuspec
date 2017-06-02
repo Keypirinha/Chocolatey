@@ -26,8 +26,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.15.1</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <version>2.15.1.1</version>
+    <packageSourceUrl>https://github.com/Keypirinha/keypirinha.github.io</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <!--<owners>laurin1</owners>-->
     <!-- ============================== -->
@@ -81,6 +81,9 @@ Written in C++, exposes a Python3 API for its plugins
 You can think of Keypirinha as an alternative to Launchy and a cousin of Alfred.
     </description>
     <releaseNotes>
+v2.15.1.1 - 2017-06-02
+Choco update - added packageSourceUrl
+
 v2.15.1 - 2017-05-10
 
 Application
