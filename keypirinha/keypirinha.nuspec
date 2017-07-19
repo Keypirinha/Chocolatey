@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.15.1.2</version>
+    <version>2.15.3</version>
     <packageSourceUrl>https://github.com/Keypirinha/keypirinha.github.io</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>laurin1</owners>
@@ -81,6 +81,27 @@ Written in C++, exposes a Python3 API for its plugins
 You can think of Keypirinha as an alternative to Launchy and a cousin of Alfred.
     </description>
     <releaseNotes>
+v2.15.3 - 2017-07-19
+
+•Fixed: the score of a suggested item was not boosted anymore (issue #217)
+
+v2.15.2 - 2017-07-19
+
+Application
+•Search algorithm is more accurate in some cases
+•Added the exclude_nonexistent_local_files setting (issue #216)
+•Fixed: acronym matches were not pushed up in the results list anymore (issue #215)
+•Fixed: system error messages could popup due to missing files, typically when Keypirinha was used across several machines (issue #206)
+•Fixed: the satellite icon was not always positioned and scaled properly in HiDPI (issue #210)
+
+
+Everything package
+•Fixed: Everything application could not be requested on 32-bit machine (issue #205)
+
+
+WebSearch package
+•Added Ecosia search site (issue #211)
+
 v2.15.1.2 - 2017-06-02
 Choco update - added owners
 

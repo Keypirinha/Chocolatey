@@ -5,8 +5,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'keypirinha'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.1/keypirinha-2.15.1-x86-portable.7z'
-$url64      = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.1/keypirinha-2.15.1-x64-portable.7z'
+$url        = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.3/keypirinha-2.15.3-x86-portable.7z'
+$url64      = 'https://github.com/Keypirinha/Keypirinha/releases/download/v2.15.3/keypirinha-2.15.3-x64-portable.7z'
 
 $packageArgs = @{
   packageName   = $packageName
