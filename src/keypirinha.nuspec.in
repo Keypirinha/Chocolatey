@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+
+    <id>keypirinha</id>
+    <title>Keypirinha</title>
+
+    <owners>laurin1</owners>
+    <authors>polyvertex</authors>
+
+    <version>{{version}}</version>
+
+    <projectUrl>http://keypirinha.com</projectUrl>
+    <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/Keypirinha/Keypirinha</projectSourceUrl>
+    <packageSourceUrl>https://github.com/Keypirinha/Chocolatey</packageSourceUrl>
+    <iconUrl>http://keypirinha.com/_static/app-128.png</iconUrl>
+
+    <licenseUrl>http://keypirinha.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+
+    <tags>keypirinha launcher keystroke tools freeware admin</tags>
+
+    <summary>Keypirinha is a fast launcher for keyboard ninjas on Windows</summary>
+
+    <description>![screenshot](http://keypirinha.com/_images/theme-layout-jumbo.png)
+
+Keypirinha is a fast launcher for keyboard ninjas on Windows.
+
+### Features
+
+* Quickly find and launch plethora of items like applications, files, bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...
+* Launch a search on any configured website or online dictionary
+* Language translations on-the-fly
+* Evaluate mathematical expressions
+* Base conversion of numbers
+* Search your environment variables
+* Launch a copied URL directly (`http`, `mailto`, `skype`, ...)
+* Split a URL and convert its arguments to JSON
+* Switch to a running application by name
+* Hash a string (CRC32, MD5, SHA, ...)
+* Generate random UUIDs, passwords, bytes sequences
+* Naturally associate a keyword to a specific item
+* Machine-specific and/or user-specific configuration
+* ... and more, see [Shipped Packages](http://keypirinha.com/shipped-packages.html) and [Third-Party Packages](http://keypirinha.com/contributions.html)
+
+### Properties
+
+* Freeware, no nag screen, no time limit, no ads
+* Customizable GUI (colors, fonts, toggling and positioning of elements)
+* Lightning fast
+* Fairly small memory footprint
+* Battery friendly
+* File-driven configuration
+* Steep but rewarding learning curve
+* Written in C++, exposes a [Python3](https://python.org) API for its plugins
+
+You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
+</description>
+
+    <releaseNotes>{{release_notes}}</releaseNotes>
+
+  </metadata>
+
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
