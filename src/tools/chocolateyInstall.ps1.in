@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'keypirinha'
-$packageVersion = '{{version}}'
+$packageVersion = '{{chocopack_version}}'
 
 $url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x86-portable.7z"
 $url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x64-portable.7z"
