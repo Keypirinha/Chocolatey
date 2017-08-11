@@ -1,10 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'keypirinha'
-$packageVersion = '2.15.3.20170810'
+$packageVersion = '2.15.3.20170811'
+$targetVersion = '2.15.3'
 
-$url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x86-portable.7z"
-$url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x64-portable.7z"
+$url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x86-portable.7z"
+$url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x64-portable.7z"
 
 $checksum32 = 'a239aca5e168e20c9115e970574fb5a4e045da92a18863dbdfd8b17ddcb858e8'
 $checksum64 = 'a9286c7b696f4123b3c58a52bdabde3bf2a58c87a98865ac552dec7a5faf1bfe'

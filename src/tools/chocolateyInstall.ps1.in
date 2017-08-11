@@ -2,9 +2,10 @@
 
 $packageName = 'keypirinha'
 $packageVersion = '{{chocopack_version}}'
+$targetVersion = '{{kp_version}}'
 
-$url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x86-portable.7z"
-$url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$packageVersion/keypirinha-$packageVersion-x64-portable.7z"
+$url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x86-portable.7z"
+$url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x64-portable.7z"
 
 $checksum32 = '{{checksum32}}'
 $checksum64 = '{{checksum64}}'
