@@ -1,5 +1,5 @@
 Source of the package that installs [Keypirinha](http://keypirinha.com) via
-[Chocolatey](https://chocolatey.org)
+[Chocolatey](https://chocolatey.org/packages/keypirinha)
 
 
 ### Directory Structure
