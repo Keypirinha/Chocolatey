@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.15.3.20170811</version>
+    <version>2.15.4</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -19,7 +19,7 @@
     <licenseUrl>http://keypirinha.com/license.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
 
-    <tags>keypirinha launcher keystroke tools freeware admin</tags>
+    <tags>keypirinha launcher keystroke tools freeware</tags>
 
     <summary>Keypirinha is a fast launcher for keyboard ninjas on Windows</summary>
 
@@ -58,9 +58,39 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.15.3 - 2017-07-19
+    <releaseNotes>## v2.15.4 - 2017-08-27
 
-* Fixed: the score of a suggested item was not boosted anymore ([#217](https://github.com/Keypirinha/Keypirinha/issues/217))
+### Application
+
+* Added the `hotkey_history` setting to the LaunchBox can be shown directly in History mode ([#220](https://github.com/Keypirinha/Keypirinha/issues/220))
+* `Ctrl+Home` and `Ctrl+End` respectively allow to jump to the top and
+  the bottom of the results list ([#223](https://github.com/Keypirinha/Keypirinha/issues/223))
+* Multi-lines text pasted in the LaunchBox will be converted to a single line like it is the case already for the `hotkey_paste` feature ([#228](https://github.com/Keypirinha/Keypirinha/issues/228))
+
+### Calc package
+
+* Added the `base_conversion` setting ([#219](https://github.com/Keypirinha/Keypirinha/issues/219))
+
+### FileBrowser package
+
+* Recently typed paths in Windows Explorer's address bar are now shown as you type. See the new `show_recents` setting for more info.
+
+### GoogleTranslate package
+
+* Added `idle_time` setting. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #5](https://github.com/Keypirinha/Packages/pull/5))
+
+### String package
+
+* Added the `Case Conversion` feature to change the case of a string. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #3](https://github.com/Keypirinha/Packages/pull/3))
+
+### URL package
+
+* Suggest `https` URL in addition to `http` when no scheme is specified
+
+### WebSuggest package
+
+* Offer to search on website even if no suggestion has been returned by the provider. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #4](https://github.com/Keypirinha/Packages/pull/4))
+* Added `idle_time` setting. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #4](https://github.com/Keypirinha/Packages/pull/4))
 </releaseNotes>
 
   </metadata>
