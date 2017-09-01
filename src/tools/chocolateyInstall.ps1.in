@@ -14,6 +14,7 @@ $checksumType = 'sha256'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = "$toolsDir\keypirinha"
 $portableDir = "$toolsDir\keypirinha\portable"
+$portableIni = "$toolsDir\keypirinha\portable.ini"
 
 Write-Host 'Stopping Keypirinha...'
 Stop-Process -processname keypirinha* -force
@@ -57,8 +58,12 @@ foreach ($file in $files) {
 # Note: it did not seem to be necessary during tests...
 New-Item "$installDir\keypirinha.exe.gui" -type file -force | Out-Null
 
-# Keypirinha specific: delete the "portable" directory to enable "Install Mode"
+# Keypirinha specific: enable "Install Mode"
 if ( $(Try { Test-Path $portableDir } Catch { $false }) ) {
   Write-Host "Deleting `'$portableDir`' so that Keypirinha runs in Install Mode"
   Remove-Item -Recurse -Force $portableDir
+}
+if ( $(Try { Test-Path $portableIni } Catch { $false }) ) {
+  Write-Host "Deleting `'$portableIni`' so that Keypirinha runs in Install Mode"
+  Remove-Item -Force $portableIni
 }
