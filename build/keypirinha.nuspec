@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.15.4</version>
+    <version>2.16</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,39 +58,42 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.15.4 - 2017-08-27
+    <releaseNotes>## v2.16 - 2017-10-20
+
+**NEW PACKAGE:** [packages/filescatalog](http://keypirinha.com/packages/filescatalog.html)
 
 ### Application
 
-* Added the `hotkey_history` setting to the LaunchBox can be shown directly in History mode ([#220](https://github.com/Keypirinha/Keypirinha/issues/220))
-* `Ctrl+Home` and `Ctrl+End` respectively allow to jump to the top and
-  the bottom of the results list ([#223](https://github.com/Keypirinha/Keypirinha/issues/223))
-* Multi-lines text pasted in the LaunchBox will be converted to a single line like it is the case already for the `hotkey_paste` feature ([#228](https://github.com/Keypirinha/Keypirinha/issues/228))
+* Added support of a `portable.ini` file to manually specify the location of the `portable` directory (see [install](http://keypirinha.com/install.html) for more info; [#233](https://github.com/Keypirinha/Keypirinha/issues/233))
+* Added support of the `--show` and `--hide` command line arguments
+  ([#237](https://github.com/Keypirinha/Keypirinha/issues/237))
+* Added predefined configuration variables `APP_DRIVE` and `APP_ARCH` (see [configuration](http://keypirinha.com/configuration.html); [#240](https://github.com/Keypirinha/Keypirinha/issues/240))
+* Minor optimizations
+* Fixed: the `Browse Profile Dir` menu/item now uses the `file_explorer` setting
+* Fixed: the `Ctrl+Del` shortcut did not work in History Mode
+* Fixed: the results list was not refreshed when an item was removed from the history in History Mode
+* Fixed: configuration files were not loaded when the character `$` was used
+  in any value of the `[var]` section ([#235](https://github.com/Keypirinha/Keypirinha/issues/235))
+* Fixed: Keypirinha failed to parse system's proxy settings if no proxy scheme was specified. Proxy scheme now defaults to HTTP and a warning message is emitted to the console ([#243](https://github.com/Keypirinha/Keypirinha/issues/243))
 
-### Calc package
+### Apps package
 
-* Added the `base_conversion` setting ([#219](https://github.com/Keypirinha/Keypirinha/issues/219))
+* The `extra_paths` setting has been obsoleted by the new [packages/filescatalog](http://keypirinha.com/packages/filescatalog.html). It is still supported but is not documented anymore in the default configuration file and will not receive any further improvement.
+* More informational messages
 
 ### FileBrowser package
 
-* Recently typed paths in Windows Explorer's address bar are now shown as you type. See the new `show_recents` setting for more info.
+* Fixed support for UNCs ([#212](https://github.com/Keypirinha/Keypirinha/issues/212))
 
 ### GoogleTranslate package
 
-* Added `idle_time` setting. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #5](https://github.com/Keypirinha/Packages/pull/5))
+* Fixed: only the translation of the first sentence was shown when multiple sentences were to translate. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([#234](https://github.com/Keypirinha/Keypirinha/issues/234), [PR #5](https://github.com/Keypirinha/Packages/pull/5))
 
-### String package
+### API
 
-* Added the `Case Conversion` feature to change the case of a string. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #3](https://github.com/Keypirinha/Packages/pull/3))
-
-### URL package
-
-* Suggest `https` URL in addition to `http` when no scheme is specified
-
-### WebSuggest package
-
-* Offer to search on website even if no suggestion has been returned by the provider. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #4](https://github.com/Keypirinha/Packages/pull/4))
-* Added `idle_time` setting. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([PR #4](https://github.com/Keypirinha/Packages/pull/4))
+* Fixed: `keypirinha_util.execute_default_action` now opens directories using the `file_explorer` setting ([#241](https://github.com/Keypirinha/Keypirinha/issues/241))
+* Embedded Python interpreter upgraded from 3.6.0 to 3.6.3
+* Updated documentation chapter: [api/python](http://keypirinha.com/api/python.html)
 </releaseNotes>
 
   </metadata>

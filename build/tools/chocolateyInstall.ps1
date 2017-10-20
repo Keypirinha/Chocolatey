@@ -1,19 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'keypirinha'
-$packageVersion = '2.15.4'
-$targetVersion = '2.15.4'
+$packageVersion = '2.16'
+$targetVersion = '2.16'
 
 $url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x86-portable.7z"
 $url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x64-portable.7z"
 
-$checksum32 = 'eaa111e03b6704345839ca07fd8a36c4531cdf5586190f586fa6fc6810b8d64c'
-$checksum64 = 'b5ff35bc4cfc7d4b97b01359290970803fe9ffd6f7906598b2082d391c5df5d0'
+$checksum32 = '1fe158d54aac1814882228fe5e252e60984ac987cda8c09f5a3ef63ebb8d26dc'
+$checksum64 = '52b02fa90a617a32e2b726bd69562a7a822c048370b84249d24c5276d2ce78eb'
 $checksumType = 'sha256'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = "$toolsDir\keypirinha"
 $portableDir = "$toolsDir\keypirinha\portable"
+$portableIni = "$toolsDir\keypirinha\portable.ini"
 
 Write-Host 'Stopping Keypirinha...'
 Stop-Process -processname keypirinha* -force
@@ -57,8 +58,12 @@ foreach ($file in $files) {
 # Note: it did not seem to be necessary during tests...
 New-Item "$installDir\keypirinha.exe.gui" -type file -force | Out-Null
 
-# Keypirinha specific: delete the "portable" directory to enable "Install Mode"
+# Keypirinha specific: enable "Install Mode"
 if ( $(Try { Test-Path $portableDir } Catch { $false }) ) {
   Write-Host "Deleting `'$portableDir`' so that Keypirinha runs in Install Mode"
   Remove-Item -Recurse -Force $portableDir
+}
+if ( $(Try { Test-Path $portableIni } Catch { $false }) ) {
+  Write-Host "Deleting `'$portableIni`' so that Keypirinha runs in Install Mode"
+  Remove-Item -Force $portableIni
 }
