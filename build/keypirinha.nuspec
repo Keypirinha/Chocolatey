@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.16</version>
+    <version>2.16.1</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,42 +58,15 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.16 - 2017-10-20
-
-**NEW PACKAGE:** [packages/filescatalog](http://keypirinha.com/packages/filescatalog.html)
+    <releaseNotes>## v2.16.1 - 2017-10-22
 
 ### Application
 
-* Added support of a `portable.ini` file to manually specify the location of the `portable` directory (see [install](http://keypirinha.com/install.html) for more info; [#233](https://github.com/Keypirinha/Keypirinha/issues/233))
-* Added support of the `--show` and `--hide` command line arguments
-  ([#237](https://github.com/Keypirinha/Keypirinha/issues/237))
-* Added predefined configuration variables `APP_DRIVE` and `APP_ARCH` (see [configuration](http://keypirinha.com/configuration.html); [#240](https://github.com/Keypirinha/Keypirinha/issues/240))
-* Minor optimizations
-* Fixed: the `Browse Profile Dir` menu/item now uses the `file_explorer` setting
-* Fixed: the `Ctrl+Del` shortcut did not work in History Mode
-* Fixed: the results list was not refreshed when an item was removed from the history in History Mode
-* Fixed: configuration files were not loaded when the character `$` was used
-  in any value of the `[var]` section ([#235](https://github.com/Keypirinha/Keypirinha/issues/235))
-* Fixed: Keypirinha failed to parse system's proxy settings if no proxy scheme was specified. Proxy scheme now defaults to HTTP and a warning message is emitted to the console ([#243](https://github.com/Keypirinha/Keypirinha/issues/243))
+* Fixed the `Explore...` actions and the default action to open DIR items ([#248](https://github.com/Keypirinha/Keypirinha/issues/248))
 
-### Apps package
+### FilesCatalog package
 
-* The `extra_paths` setting has been obsoleted by the new [packages/filescatalog](http://keypirinha.com/packages/filescatalog.html). It is still supported but is not documented anymore in the default configuration file and will not receive any further improvement.
-* More informational messages
-
-### FileBrowser package
-
-* Fixed support for UNCs ([#212](https://github.com/Keypirinha/Keypirinha/issues/212))
-
-### GoogleTranslate package
-
-* Fixed: only the translation of the first sentence was shown when multiple sentences were to translate. Thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez) ([#234](https://github.com/Keypirinha/Keypirinha/issues/234), [PR #5](https://github.com/Keypirinha/Packages/pull/5))
-
-### API
-
-* Fixed: `keypirinha_util.execute_default_action` now opens directories using the `file_explorer` setting ([#241](https://github.com/Keypirinha/Keypirinha/issues/241))
-* Embedded Python interpreter upgraded from 3.6.0 to 3.6.3
-* Updated documentation chapter: [api/python](http://keypirinha.com/api/python.html)
+* Improved inline/online documentation
 </releaseNotes>
 
   </metadata>
