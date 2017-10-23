@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.16.1</version>
+    <version>2.16.2</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,15 +58,16 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.16.1 - 2017-10-22
+    <releaseNotes>## v2.16.2 - 2017-10-23
 
 ### Application
 
-* Fixed the `Explore...` actions and the default action to open DIR items ([#248](https://github.com/Keypirinha/Keypirinha/issues/248))
+* The `--show` command line argument will also launch the application if it is not already running
 
 ### FilesCatalog package
 
-* Improved inline/online documentation
+* Fixed: it was not possible to specify arguments to the items of this package
+* Fixed: catalog was not always refreshed when settings were modified at runtime
 </releaseNotes>
 
   </metadata>
