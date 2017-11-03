@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.16.3</version>
+    <version>2.17</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,17 +58,42 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.16.3 - 2017-10-26
+    <releaseNotes>## v2.17 - 2017-11-03
 
 ### Application
 
-* Added the generic action `Edit` for FILE items. It uses Keypirinha's `editor` setting to open the selected item, or by default, tries to execute the item with Shell's `edit` verb.
-* File path of items is not fully normalized internally anymore ([#252](https://github.com/Keypirinha/Keypirinha/issues/252))
+* If the *Paste* hotkey (`hotkey_paste` setting) is pressed twice in a row, the selected item will be executed without having to press `Enter`
+* Added a *Diagnostic Window*, accessible by pressing `F3` from the
+  LaunchBox, via the main menu, or by executing the
+  `Keypirinha: Diagnostic Window` item
+* Desktop and Start Menu items are not automatically refreshed anymore if Keypirinha is installed in the Desktop or Start Menu folder ([#229](https://github.com/Keypirinha/Keypirinha/issues/229))
+* Invoking the LaunchBox does not bring back the Console to front anymore
+
+### FileBrowser package
+
+* Fixed: the plugin will not try to make suggestions from input `::`
 
 ### FilesCatalog package
 
-* An `on_imported` function can be implemented in the `filescatalog_user_callbacks.py` module so it is possible to implement init routine
-* Fixed: *python_callback* setting
+* **IMPORTANT:** the default filtering behavior has changed in order to be more intuitive ([#253](https://github.com/Keypirinha/Keypirinha/issues/253), [#254](https://github.com/Keypirinha/Keypirinha/issues/254))
+* **IMPORTANT:** the `regex` property of the `filters` setting now matches
+  the **full path** by default
+* The `filters` setting accepts new properties: `case` and `nodrive`
+
+### URL package
+
+* Minor improvements
+
+### WebSearch package
+
+* Added the `multi_url_delay` setting to help ensuring multiple URLs are opened in order
+
+### API
+
+* `keypirinha.Events.DESKTOP` and `keypirinha.Events.STARTMENU` events are not sent anymore in case Keypirinha is installed in one of the Desktop or Start Menu folders (documentation updated)
+* The generic `globex.py` and `filefilter.py` modules embedded in the
+  `FilesCatalog` package are now distributed with Keypirinha and are usable
+  by any plugin
 </releaseNotes>
 
   </metadata>

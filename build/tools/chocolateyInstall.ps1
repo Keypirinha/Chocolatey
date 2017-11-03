@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'keypirinha'
-$packageVersion = '2.16.3'
-$targetVersion = '2.16.3'
+$packageVersion = '2.17'
+$targetVersion = '2.17'
 
 $url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x86-portable.7z"
 $url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x64-portable.7z"
 
-$checksum32 = '58fe4ecf14ee3cf680486607695065b3aa81e2c752a77302d22f50389da63203'
-$checksum64 = '160aea7a905a8affeb6970ead432112bcfbb8106d3c450e84e4d16f1333d5ae7'
+$checksum32 = 'c72d1ac855f24ce0dd125f26251fe1566b6ae53cd5577051c7b21fb3c6315466'
+$checksum64 = '3b748f3da79d775774342a07b37366fb7694c91e89cf6b766ad4961a6ebc17f0'
 $checksumType = 'sha256'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
