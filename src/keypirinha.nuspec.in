@@ -41,19 +41,19 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 * Hash a string (CRC32, MD5, SHA, ...)
 * Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
-* Machine-specific and/or user-specific configuration
+* Machine-specific and/or user-specific configuration in separate config files
 * ... and more, see [Shipped Packages](http://keypirinha.com/shipped-packages.html) and [Third-Party Packages](http://keypirinha.com/contributions.html)
 
 ### Properties
 
-* Freeware, no nag screen, no time limit, no ads
-* Customizable GUI (colors, fonts, toggling and positioning of elements)
+* Plugin-oriented architecture (C++ at its core, [Python3](https://python.org) for its plugins)
+* File-driven configuration
 * Lightning fast
 * Fairly small memory footprint
 * Battery friendly
-* File-driven configuration
+* Customizable GUI (colors, fonts, toggling and positioning of elements)
 * Steep but rewarding learning curve
-* Written in C++, exposes a [Python3](https://python.org) API for its plugins
+* Freeware, no nag screen, no time limit, no ads
 
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
