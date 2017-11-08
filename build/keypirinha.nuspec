@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.17</version>
+    <version>2.18</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -41,59 +41,32 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 * Hash a string (CRC32, MD5, SHA, ...)
 * Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
-* Machine-specific and/or user-specific configuration
+* Machine-specific and/or user-specific configuration in separate config files
 * ... and more, see [Shipped Packages](http://keypirinha.com/shipped-packages.html) and [Third-Party Packages](http://keypirinha.com/contributions.html)
 
 ### Properties
 
-* Freeware, no nag screen, no time limit, no ads
-* Customizable GUI (colors, fonts, toggling and positioning of elements)
+* Plugin-oriented architecture (C++ at its core, [Python3](https://python.org) for its plugins)
+* File-driven configuration
 * Lightning fast
 * Fairly small memory footprint
 * Battery friendly
-* File-driven configuration
+* Customizable GUI (colors, fonts, toggling and positioning of elements)
 * Steep but rewarding learning curve
-* Written in C++, exposes a [Python3](https://python.org) API for its plugins
+* Freeware, no nag screen, no time limit, no ads
 
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.17 - 2017-11-03
+    <releaseNotes>## v2.18 - 2017-11-08
 
 ### Application
 
-* If the *Paste* hotkey (`hotkey_paste` setting) is pressed twice in a row, the selected item will be executed without having to press `Enter`
-* Added a *Diagnostic Window*, accessible by pressing `F3` from the
-  LaunchBox, via the main menu, or by executing the
-  `Keypirinha: Diagnostic Window` item
-* Desktop and Start Menu items are not automatically refreshed anymore if Keypirinha is installed in the Desktop or Start Menu folder ([#229](https://github.com/Keypirinha/Keypirinha/issues/229))
-* Invoking the LaunchBox does not bring back the Console to front anymore
-
-### FileBrowser package
-
-* Fixed: the plugin will not try to make suggestions from input `::`
-
-### FilesCatalog package
-
-* **IMPORTANT:** the default filtering behavior has changed in order to be more intuitive ([#253](https://github.com/Keypirinha/Keypirinha/issues/253), [#254](https://github.com/Keypirinha/Keypirinha/issues/254))
-* **IMPORTANT:** the `regex` property of the `filters` setting now matches
-  the **full path** by default
-* The `filters` setting accepts new properties: `case` and `nodrive`
-
-### URL package
-
+* Added the `word_separators` setting
+* Fixed the handling of the `file_explorer` setting: `{{dir_or_parent}}` and
+  `{{dir_or_parent_q}}` placeholders were not expanded
+* Fixed: `show_on_taskbar = no` was not honored anymore since v2.17 ([#259](https://github.com/Keypirinha/Keypirinha/issues/259))
 * Minor improvements
-
-### WebSearch package
-
-* Added the `multi_url_delay` setting to help ensuring multiple URLs are opened in order
-
-### API
-
-* `keypirinha.Events.DESKTOP` and `keypirinha.Events.STARTMENU` events are not sent anymore in case Keypirinha is installed in one of the Desktop or Start Menu folders (documentation updated)
-* The generic `globex.py` and `filefilter.py` modules embedded in the
-  `FilesCatalog` package are now distributed with Keypirinha and are usable
-  by any plugin
 </releaseNotes>
 
   </metadata>
