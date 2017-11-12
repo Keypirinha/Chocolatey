@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.18</version>
+    <version>2.18.1</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,15 +58,18 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.18 - 2017-11-08
+    <releaseNotes>## v2.18.1 - 2017-11-12
 
 ### Application
 
-* Added the `word_separators` setting
-* Fixed the handling of the `file_explorer` setting: `{{dir_or_parent}}` and
-  `{{dir_or_parent_q}}` placeholders were not expanded
-* Fixed: `show_on_taskbar = no` was not honored anymore since v2.17 ([#259](https://github.com/Keypirinha/Keypirinha/issues/259))
-* Minor improvements
+* Edit controls: removed some occasional visual glitches
+* Edit controls: added support for the conventional `Ctrl+Shift+...`
+  shortcuts to extend selection ([#260](https://github.com/Keypirinha/Keypirinha/issues/260))
+* Edit controls: improved the handling of the `PageDown` and `PageUp` events (`Console` and `Diagnostic Window`)
+
+### Calc package
+
+* Show the width of binary results in item's description
 </releaseNotes>
 
   </metadata>
