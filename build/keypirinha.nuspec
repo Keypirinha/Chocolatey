@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.18.2</version>
+    <version>2.19</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,11 +58,47 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 </description>
 
-    <releaseNotes>## v2.18.2 - 2017-11-13
+    <releaseNotes>## v2.19 - 2018-09-13
 
-* Removed a visual glitch that would make the old content of the edit control of the LaunchBox still visible when the LaunchBox is invoked
-* Fixed: the edit control of the LaunchBox was not always entirely drawn
-  ([#262](https://github.com/Keypirinha/Keypirinha/issues/262))
+### Application
+
+* Added the `config_editor` setting so that Keypirinha's configuration files can be edited with a specific text editor ([#264](https://github.com/Keypirinha/Keypirinha/issues/264))
+* Added: `satellite_size` setting now accepts the `superjumbo` value to
+  render 256x256 icon ([#298](https://github.com/Keypirinha/Keypirinha/issues/298))
+* Added support for environment variables notation like `%USERNAME%` in the `portable.ini` file ([#315](https://github.com/Keypirinha/Keypirinha/issues/315))
+* Added the `loop_list` setting ([#301](https://github.com/Keypirinha/Keypirinha/issues/301))
+* Fixed: the satellite icon was not always positioned and scaled properly in HiDPI ([#210](https://github.com/Keypirinha/Keypirinha/issues/210))
+* Fixed: the `space_as_tab` setting is now ignored unless the caret is at the
+  end of the search terms while the `Space` key is pressed
+* Fixed: `Ctrl+BackSpace` did not erase anything when the text box selection was not empty ([#302](https://github.com/Keypirinha/Keypirinha/issues/302))
+* Fixed: `color_title` value was overwritten by `color_foreground`
+  internally ([#316](https://github.com/Keypirinha/Keypirinha/issues/316))
+* Fixed: `color_status` value was overwritten by `color_faded` internally ([#316](https://github.com/Keypirinha/Keypirinha/issues/316))
+* Fixed: Keypirinha should now be able to run from a shared folder or a mounted
+  network drive (Python failed to initialize from a UNC path; [#267](https://github.com/Keypirinha/Keypirinha/issues/267))
+* Minor improvements
+
+### FilesCatalog package
+
+* Fixed: the `PathShellFilter has no attribute name` error that was occuring in some configuration cases ([#275](https://github.com/Keypirinha/Keypirinha/issues/275))
+* Fixed: the `string index out of range` error that could occur when a
+  `paths` value contains a recursive search inside a drive letter only
+  ([#314](https://github.com/Keypirinha/Keypirinha/issues/314))
+
+### String package
+
+* Added `String: Base64` item (base64 encoder/decoder; thanks to [@alexandr-san4ez](https://github.com/alexandr-san4ez))
+
+### API
+
+* `keypirinha_wintypes.get_known_folder_path` accepts known folder's name
+
+### Docs
+
+* Referenced several third-party packages in [contributions](http://keypirinha.com/contributions.html) (thanks community!)
+* Referenced the theme builder made by [@Fuhrmann](https://github.com/Fuhrmann) in [theming](http://keypirinha.com/theming.html)
+  (thanks!)
+* Corrections and improvements
 </releaseNotes>
 
   </metadata>
