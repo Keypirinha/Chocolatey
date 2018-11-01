@@ -23,7 +23,7 @@
 
     <summary>Keypirinha is a fast launcher for keyboard ninjas on Windows</summary>
 
-    <description>![screenshot](http://keypirinha.com/_images/theme-layout-jumbo.png)
+    <description><![CDATA[![screenshot](http://keypirinha.com/_images/theme-layout-jumbo.png)
 
 Keypirinha is a fast launcher for keyboard ninjas on Windows.
 
@@ -56,9 +56,9 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 * Freeware, no nag screen, no time limit, no ads
 
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
-</description>
+]]></description>
 
-    <releaseNotes>{{release_notes}}</releaseNotes>
+    <releaseNotes><![CDATA[{{release_notes}}]]></releaseNotes>
 
   </metadata>
 
