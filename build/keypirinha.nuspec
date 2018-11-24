@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.22.1</version>
+    <version>2.23</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,9 +58,27 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 ]]></description>
 
-    <releaseNotes><![CDATA[## v2.22.1 - 2018-11-03
+    <releaseNotes><![CDATA[## v2.23 - 2018-11-14
 
-* Reverted the change made in v2.22 regarding [#332](https://github.com/Keypirinha/Keypirinha/issues/332) since it impacted the `Open as Administrator` action
+### Application
+
+* Fixed a bug that prevented search terms with special characters like `=`, `-` or `+` to be matched ([#343](https://github.com/Keypirinha/Keypirinha/issues/343))
+
+### GUI
+
+* Fixed: pressing `Alt+Left` to step back (or `Backspace` from Actions list) was sometimes jumping to initial search step even though there was an "arguments step" involved
+* Fixed: the number of available actions for the selected item was not always
+  displayed
+
+### Docs
+
+* Added documented examples to [packages/filescatalog](http://keypirinha.com/packages/filescatalog.html)
+* Referenced third-party packages in [contributions](http://keypirinha.com/contributions.html) (thanks community!)
+* Documented `Ctrl+1` and `Ctrl+Numpad1` in the [keyboard](http://keypirinha.com/keyboard.html) chapter ([#326](https://github.com/Keypirinha/Keypirinha/issues/326))
+
+### API
+
+* Embedded Python interpreter upgraded from v3.6.3 to v3.6.7
 ]]></releaseNotes>
 
   </metadata>
