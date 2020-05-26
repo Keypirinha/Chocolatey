@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.24</version>
+    <version>2.25</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,56 +58,46 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 ]]></description>
 
-    <releaseNotes><![CDATA[## v2.24 - 2019-08-18
+    <releaseNotes><![CDATA[## v2.25 - 2020-05-25
 
 ### Application
 
-* The following warning message will be printed in the console when a `.keypirinha-package` file could not be read as a Zip archive: `Failed to load/read what appears to be a package file` ([#368](https://github.com/Keypirinha/Keypirinha/issues/368))
+* Longer delay before writing catalog file (might help in fixing [#377](https://github.com/Keypirinha/Keypirinha/issues/377); delay changed from 5 to 15 seconds)
+* Limit applied to pasted text increased from 512 to 8192 characters
+* Slightly improved stability
 
 ### GUI
 
-* Fixed hard-coded minimum font size has been lowered from 8 to 6 points ([#355](https://github.com/Keypirinha/Keypirinha/issues/355))
-* Allow more space for the search text when an item is selected ([#364](https://github.com/Keypirinha/Keypirinha/issues/364))
-
-### Bookmarks package
-
-* Added support for *Falkon* web browser (formerly *QupZilla*; thanks [@nuno-andre](https://github.com/nuno-andre))
-* Fixed erroneous detection of the encoding of some files (a.k.a. the
-  "unicode / charmap" bug; [#336](https://github.com/Keypirinha/Keypirinha/issues/336), [#375](https://github.com/Keypirinha/Keypirinha/issues/375), [#396](https://github.com/Keypirinha/Keypirinha/issues/396))
+* Fixed: satellite icon was not updated during the "args" step of the search ([#399](https://github.com/Keypirinha/Keypirinha/issues/399))
 
 ### Calc package
 
-* Added support for (persistent) variables ([#354](https://github.com/Keypirinha/Keypirinha/issues/354); thanks [@DrorHarari](https://github.com/DrorHarari))
-* Fixed value type conversion bug when using `gcd` function for instance
-  ([#367](https://github.com/Keypirinha/Keypirinha/issues/367); thanks [@dreadnaut](https://github.com/dreadnaut))
-
-### Everything package
-
-* Added inline documentation and extra search example in default configuration file (thanks [@DrorHarari](https://github.com/DrorHarari))
+* Fixed: `'module' object is not callable` error of `rand()` (thanks [@caltaojihun](https://github.com/caltaojihun))
+* Fixed: Calc plugin was getting triggered with some URLs containing an `=`
+  sign for instance ([#407](https://github.com/Keypirinha/Keypirinha/issues/407); thanks [@DrorHarari](https://github.com/DrorHarari))
+* Fixed a bug that would make the plugin to produce a lot of log messages
 
 ### FilesCatalog package
 
-* Fixed handling of the `attr: directory` filter ([#388](https://github.com/Keypirinha/Keypirinha/issues/388))
+* Added directory browsing functionality ([#270](https://github.com/Keypirinha/Keypirinha/issues/270); thanks [@maykot](https://github.com/maykot))
+* Allow to open items with a custom command (thanks [@fran-f](https://github.com/fran-f))
 
 ### String package
 
-* Added multiple case conversion features (thanks [@DrorHarari](https://github.com/DrorHarari))
+* Added *Unescape* conversion (thanks [@alexandr-san4ez](https://github.com/alexandr-san4ez))
+* Added *Slug Case* conversion ([#445](https://github.com/Keypirinha/Keypirinha/issues/445); thanks [@marcus-at-localhost](https://github.com/marcus-at-localhost))
 
-### URL package
+### WinSCP package
 
-* Added support for extra TLDs `.test`, `.example`, `.invalid` and `.localhost` ([#359](https://github.com/Keypirinha/Keypirinha/issues/359); thanks [@dreadnaut](https://github.com/dreadnaut))
-
-### Docs
-
-* `Keypirinha.ini`: added theme's colors descriptions as inline documentation ([#382](https://github.com/Keypirinha/Keypirinha/issues/382); thanks [@imswebra](https://github.com/imswebra))
-* `Keypirinha.ini`: default value of the `show_on_taskbar` setting was
-  incorrectly documented as `no` whereas it is hard-coded as `yes` in the
-  application ([#383](https://github.com/Keypirinha/Keypirinha/issues/383))
-* Referenced third-party packages in [contributions](http://keypirinha.com/contributions.html) and [theming](http://keypirinha.com/theming.html) (including [#345](https://github.com/Keypirinha/Keypirinha/issues/345); thanks community!)
+* Allow custom path to `WinSCP.ini` file ([#263](https://github.com/Keypirinha/Keypirinha/issues/263); thanks [@sam97](https://github.com/sam97))
+* Support workspaces ([#420](https://github.com/Keypirinha/Keypirinha/issues/420); thanks [@sam97](https://github.com/sam97))
 
 ### API
 
-* `PyJWT` package is now part of Keypirinha's Python Library
+* Fixed: `CatalogItem.data_bag` property was not updated upon a call to `Plugin.set_catalog` when a similar item was existing already ([#438](https://github.com/Keypirinha/Keypirinha/issues/438))
+* Fixed: `PathShellFilter has no attribute name` ([#275](https://github.com/Keypirinha/Keypirinha/issues/275))
+* Internal CPython interpreter upgraded from v3.6.7 to v3.7.4
+* Memory allocation bug fixing for Python objects
 ]]></releaseNotes>
 
   </metadata>
