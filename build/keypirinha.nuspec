@@ -8,7 +8,7 @@
     <owners>laurin1</owners>
     <authors>polyvertex</authors>
 
-    <version>2.25</version>
+    <version>2.26</version>
 
     <projectUrl>http://keypirinha.com</projectUrl>
     <bugTrackerUrl>https://github.com/Keypirinha/Keypirinha/issues</bugTrackerUrl>
@@ -58,46 +58,21 @@ Keypirinha is a fast launcher for keyboard ninjas on Windows.
 You can think of Keypirinha as an alternative to *Launchy* and a cousin of *Alfred*.
 ]]></description>
 
-    <releaseNotes><![CDATA[## v2.25 - 2020-05-25
+    <releaseNotes><![CDATA[## v2.26 - 2020-11-08
 
 ### Application
 
-* Longer delay before writing catalog file (might help in fixing [#377](https://github.com/Keypirinha/Keypirinha/issues/377); delay changed from 5 to 15 seconds)
-* Limit applied to pasted text increased from 512 to 8192 characters
-* Slightly improved stability
-
-### GUI
-
-* Fixed: satellite icon was not updated during the "args" step of the search ([#399](https://github.com/Keypirinha/Keypirinha/issues/399))
+* Fixed: trouble opening Google Chrome when configured as system default web browser ([#474](https://github.com/Keypirinha/Keypirinha/issues/474))
+* Fixed: drag and drop when `single_click` is enabled ([#458](https://github.com/Keypirinha/Keypirinha/issues/458))
+* Fixed a mouse move event that occurred when `single_click` is enabled even though the mouse was not being moved ([#394](https://github.com/Keypirinha/Keypirinha/issues/394) and [#444](https://github.com/Keypirinha/Keypirinha/issues/444))
 
 ### Calc package
 
-* Fixed: `'module' object is not callable` error of `rand()` (thanks [@caltaojihun](https://github.com/caltaojihun))
-* Fixed: Calc plugin was getting triggered with some URLs containing an `=`
-  sign for instance ([#407](https://github.com/Keypirinha/Keypirinha/issues/407); thanks [@DrorHarari](https://github.com/DrorHarari))
-* Fixed a bug that would make the plugin to produce a lot of log messages
+* Fixed the display of scientific values ([#473](https://github.com/Keypirinha/Keypirinha/issues/473))
 
-### FilesCatalog package
+### Docs
 
-* Added directory browsing functionality ([#270](https://github.com/Keypirinha/Keypirinha/issues/270); thanks [@maykot](https://github.com/maykot))
-* Allow to open items with a custom command (thanks [@fran-f](https://github.com/fran-f))
-
-### String package
-
-* Added *Unescape* conversion (thanks [@alexandr-san4ez](https://github.com/alexandr-san4ez))
-* Added *Slug Case* conversion ([#445](https://github.com/Keypirinha/Keypirinha/issues/445); thanks [@marcus-at-localhost](https://github.com/marcus-at-localhost))
-
-### WinSCP package
-
-* Allow custom path to `WinSCP.ini` file ([#263](https://github.com/Keypirinha/Keypirinha/issues/263); thanks [@sam97](https://github.com/sam97))
-* Support workspaces ([#420](https://github.com/Keypirinha/Keypirinha/issues/420); thanks [@sam97](https://github.com/sam97))
-
-### API
-
-* Fixed: `CatalogItem.data_bag` property was not updated upon a call to `Plugin.set_catalog` when a similar item was existing already ([#438](https://github.com/Keypirinha/Keypirinha/issues/438))
-* Fixed: `PathShellFilter has no attribute name` ([#275](https://github.com/Keypirinha/Keypirinha/issues/275))
-* Internal CPython interpreter upgraded from v3.6.7 to v3.7.4
-* Memory allocation bug fixing for Python objects
+* Modified inline documentation of the default `Keypirinha.ini` file by adding missing info about the `normal` font style in section `[theme/Default]` ([#433](https://github.com/Keypirinha/Keypirinha/issues/433))
 ]]></releaseNotes>
 
   </metadata>

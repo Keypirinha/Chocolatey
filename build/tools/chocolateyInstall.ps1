@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'keypirinha'
-$packageVersion = '2.25'
-$targetVersion = '2.25'
+$packageVersion = '2.26'
+$targetVersion = '2.26'
 
 $url32 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x86-portable.7z"
 $url64 = "https://github.com/Keypirinha/Keypirinha/releases/download/v$targetVersion/keypirinha-$targetVersion-x64-portable.7z"
 
-$checksum32 = 'fa3e62038ac634ab533af49deccacba2e5430cb4f2e23ecbb50b364a4d212bf1'
-$checksum64 = '8e8243bc40553e23dfe39164ef85b4a02663f0804ccb3f18d997b2da5f41b889'
+$checksum32 = '829f35b0bfcc6b26a19c39beed26f0827dd3437be367c1d27e1da60be179b56a'
+$checksum64 = 'd109a16e6a5cf311abf6d06bbe5b1be3b9ba323b79c32a168628189e10f102a5'
 $checksumType = 'sha256'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -26,10 +26,10 @@ Uninstall-BinFile -Name "keypirinha-x86" `
                   -Path "$installDir\bin\x86\keypirinha-x86.exe"
 Uninstall-BinFile -Name "keypirinha-x64" `
                   -Path "$installDir\bin\x64\keypirinha-x64.exe"
-Uninstall-BinFile -Name "Notepad2" `
-                  -Path "$installDir\bin\x86\bin\notepad2\Notepad2.exe"
-Uninstall-BinFile -Name "Notepad2" `
-                  -Path "$installDir\bin\x64\bin\notepad2\Notepad2.exe"
+# Uninstall-BinFile -Name "Notepad2" `
+#                   -Path "$installDir\bin\x86\bin\notepad2\Notepad2.exe"
+# Uninstall-BinFile -Name "Notepad2" `
+#                   -Path "$installDir\bin\x64\bin\notepad2\Notepad2.exe"
 
 # Note: a "Get-ProcessorBits 64" test would be redundant here since
 # Install-ChocolateyZipPackage apparently takes care of choosing the appropriate
