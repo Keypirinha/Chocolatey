@@ -65,3 +65,10 @@ Notes:
 
 * The `--force` flag may be used to force reinstall the package
 * `install` may be replaced by `upgrade`
+
+Upload:
+
+```
+choco apiKey --key YOUR_API_KEY --source https://push.chocolatey.org/
+choco push keypirinha.x.yy.zzz.nupkg --source https://push.chocolatey.org/
+```
