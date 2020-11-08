@@ -26,10 +26,10 @@ Uninstall-BinFile -Name "keypirinha-x86" `
                   -Path "$installDir\bin\x86\keypirinha-x86.exe"
 Uninstall-BinFile -Name "keypirinha-x64" `
                   -Path "$installDir\bin\x64\keypirinha-x64.exe"
-Uninstall-BinFile -Name "Notepad2" `
-                  -Path "$installDir\bin\x86\bin\notepad2\Notepad2.exe"
-Uninstall-BinFile -Name "Notepad2" `
-                  -Path "$installDir\bin\x64\bin\notepad2\Notepad2.exe"
+# Uninstall-BinFile -Name "Notepad2" `
+#                   -Path "$installDir\bin\x86\bin\notepad2\Notepad2.exe"
+# Uninstall-BinFile -Name "Notepad2" `
+#                   -Path "$installDir\bin\x64\bin\notepad2\Notepad2.exe"
 
 # Note: a "Get-ProcessorBits 64" test would be redundant here since
 # Install-ChocolateyZipPackage apparently takes care of choosing the appropriate
