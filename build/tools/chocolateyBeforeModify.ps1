@@ -1,1 +1,1 @@
-﻿Stop-Process -processname keypirinha* -force
+﻿Stop-Process -Name "keypirinha*" -Force

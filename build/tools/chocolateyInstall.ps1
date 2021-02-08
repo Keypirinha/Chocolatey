@@ -17,7 +17,7 @@ $portableDir = "$toolsDir\keypirinha\portable"
 $portableIni = "$toolsDir\keypirinha\portable.ini"
 
 Write-Host 'Stopping Keypirinha...'
-Stop-Process -processname keypirinha* -force
+Stop-Process -Name "keypirinha*" -Force
 
 # Manually remove shims erroneously created by previous versions of the
 # Chocolatey package (2.15.3 and previous).
@@ -46,24 +46,31 @@ Install-ChocolateyZipPackage -PackageName $packageName `
 # Generate an "*.ignore" file for every executable except keypirinha.exe, so
 # Chocolatey creates only one shim for Keypirinha (i.e. "keypirinha.exe" at the
 # root of $installDir).
-$files = Get-ChildItem $installDir -include *.exe -recurse
+$files = Get-ChildItem -Path $installDir -Include *.exe -Recurse
 foreach ($file in $files) {
   if (!($file.Name.Contains('keypirinha.exe'))) {
-    New-Item "$file.ignore" -type file -force | Out-Null
+    New-Item -Path "$file.ignore" -ItemType "file" -Force | Out-Null
   }
 }
 
 # Generate a "keypirinha.exe.gui" file to ensure Chocolatey does not run
 # Keypirinha in console mode.
 # Note: it did not seem to be necessary during tests...
-New-Item "$installDir\keypirinha.exe.gui" -type file -force | Out-Null
+New-Item -Path "$installDir\keypirinha.exe.gui" -ItemType "file" -Force | Out-Null
 
 # Keypirinha specific: enable "Install Mode"
 if ( $(Try { Test-Path $portableDir } Catch { $false }) ) {
   Write-Host "Deleting `'$portableDir`' so that Keypirinha runs in Install Mode"
-  Remove-Item -Recurse -Force $portableDir
+  Remove-Item -Path $portableDir -Recurse -Force
 }
 if ( $(Try { Test-Path $portableIni } Catch { $false }) ) {
   Write-Host "Deleting `'$portableIni`' so that Keypirinha runs in Install Mode"
-  Remove-Item -Force $portableIni
+  Remove-Item -Path $portableIni -Force
 }
+
+$target = Join-Path $toolsDir "$($packageName)\$($packageName).exe"
+Install-ChocolateyShortcut `
+  -ShortcutFilePath "$([Environment]::GetFolderPath('CommonStartMenu'))\Programs\Keypirinha.lnk" `
+  -TargetPath $target
+
+Start-Process -FilePath $target
